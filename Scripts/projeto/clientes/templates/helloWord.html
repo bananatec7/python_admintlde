@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+	{% block content %}
+<section class="content">
+  <div class="container-fluid">
+  	
+  	<div class="card card-header">
+	    <form method="GET" action="" class="form-horizontal">
+		    <div class="form-group row">
+		      <!--<label for="inputEmail3" class="col-sm-1 col-form-label">CNPJ/Cliente</label>-->
+		      <div class="col-sm-4">
+		        <input type="text" class="form-control" id="filtro_cliente" name="filtro_cliente"
+		        placeholder="Pesquise por CNPJ/Cliente">
+		      </div>
+		    </div> 
+				<div class="card-footer">
+				      <button type="submit" class="btn btn-info">Pesquisar</button>
+				      <!--<button type="submit" class="btn btn-default float-right">Cancel</button>-->
+				</div>	
+		</form>
+	</div>
+
+	<div class="card">
+		<div class="card-header">
+			<a href="">
+				<button class='btn btn-default btn-cad float-right'>Cadastrar</button>
+			</a>	
+		</div>	
+		<div class="card-body box-table">
+		  <table id="example2" class="table table-bordered table-hover tabelaView">
+		    <thead>
+		    <tr class="ThLinha">
+		      <th>CLIENTE</th>
+		      <th>CNPJ</th>
+		      <th>CEP</th>
+		      <th>ENDEREÇO</th>
+		      <th>ATIVO</th>
+		      <th>OBS</th>
+		      <th>VENCIMENTO</th>
+		      <th colspan="3" class="thacao">AÇÂO</th>
+		    </tr>
+		    </thead>
+
+		  </table>
+
+		  <div class="card-footer">
+		  	<div class="paginacao">
+		  		
+		  	</div>
+		  </div>
+
+		</div>
+	</div>
+  </div>
+</section>
+
+  <div class="modal fade" id='modal-lg'>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Detalhes Cliente</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>-->
+      </div>
+    </div>
+  </div>
+</div>
+	{% endblock %}	
